@@ -22,8 +22,8 @@
           <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" , class: 'form-control-file user_image' %>
         </div>
         <div class="form-group">
-          <label for="user_introducion_id">Introduction</label>
-          <%= f.text_area :introduction_id , class: 'form-control introduction_id' %>
+          <label for="user_introducion">Introduction</label>
+          <%= f.text_area :introduction , class: 'form-control introduction' %>
         </div>
         <div class="form-group">
           <%= f.submit "Update User", class: 'btn btn-success' %>
