@@ -1,5 +1,5 @@
 <h2>User info</h2>
-<%= attachment_image_tag book.user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %>
+<%= attachment_image_tag user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %>
 <table class="table">
   <tbody>
     <tr>
@@ -13,5 +13,5 @@
   </tbody>
 </table>
 <div class="row">
-  <%= link_to "edit", edit_user_path(current_user), class: 'btn btn-outline-secondary btn-block' %>
+  <%= link_to "", edit_user_path(current_user), class: 'fas fa-user-cog btn btn-outline-secondary btn-block' %>
 </div>
