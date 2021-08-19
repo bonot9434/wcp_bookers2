@@ -15,21 +15,15 @@
         <% end %>
         <%= form_with model: @book, local:true do |f| %>
         <div class="form-group">
-          <div class="field">
-            <label for="book_title">Title</label>
+          <label for="book_title">Title</label>
             <%= f.text_field :title , class: 'form-control book_title' %>
           </div>
-        </div>
         <div class="form-group">
-          <div class="field">
-            <label for="book_opinion">Opinion</label>
+          <label for="book_opinion">Opinion</label>
             <%= f.text_area :body , class: 'form-control book_body' %>
           </div>
-        </div>
         <div class="form-group">
-          <div class="actions">
             <%= f.submit "Update Book", class: 'btn btn-success' %>
-          </div>
         </div>
         <% end %>
         <%= link_to "Show",book_path(@book) %>

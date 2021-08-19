@@ -1,4 +1,4 @@
-<div class="container px-5 px-sm-0">
+<div class="container">
   <div class="row">
     <div class="col-md-3">
       <%= render 'users/user', user: @user ,book: @book %>
@@ -23,11 +23,11 @@
         <tbody>
           <tr>
             <td>
-              <%= attachment_image_tag @book.user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg", size:'40x40' %>
+              <%= attachment_image_tag @user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg", size:'40x40' %>
               <br>
-              <%= link_to @user.name, user_path(current_user.id) %>
+              <%= link_to @user.name, user_path(@user) %>
             </td>
-            <td><%= @book.title %></td>
+            <td><%= @book.title %>
             <td><%= @book.body %></td>
             <% if @book.user_id == current_user.id %>
             <td><%= link_to "Edit", edit_book_path(@book), class:"btn btn-success"%></td>
